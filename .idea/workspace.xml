@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Medioss.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Lenovo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medios_basicos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/Departamento.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/equipo_electrico.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/estado_mueble.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/medio_basico.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/mueble.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/operacion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/operacion_actualizacion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/operacion_alta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/operacion_cambio_local.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/operacion_cambio_responsble.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/repositorio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/responsable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/servicios_entidad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/tipo_medio_basicos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modelo/tipo_operacion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/Loguin.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/Muebles.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ReportesResponsable.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/burbuja.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/equipo_x_marcas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/hoja.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/1491313938-close_82982.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/4105943-accounts-group-people-user-user-group-users_113923.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/Plus_36851.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/Windows_Close_Program_22531.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/Windows_Messenger_22559.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/help_question_1566.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/iconfinder-trash-4341321_120557.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/record_operations_icon_216630.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/table_icon-icons.com_69867.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/iconos/vcsupdaterequired_93493.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/lista_mayor_consumo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/lista_mueble.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/lista_responsable.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/loguin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/porciento_medios_basicos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/reportes/reporte_e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/reportes/reporte_ee.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/responsable_equipo_may_consumo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/responsable_may_edad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/Loguin.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/lista_responsable.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/porciento_medios_basicos.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/responsable_may_cosumo.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/responsable_may_edad.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ui/ventana_principal.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/ventana.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$ctor de la torre informe del proyecto final .docx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Medioss$ventana.coverage" NAME="ventana Coverage Results" MODIFIED="1602222188191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas" />
+    <SUITE FILE_PATH="coverage/Medioss$lista_responsable.coverage" NAME="lista_responsable Coverage Results" MODIFIED="1602103963539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas" />
+    <SUITE FILE_PATH="coverage/Medioss$lista_mueble.coverage" NAME="lista_mueble Coverage Results" MODIFIED="1602145080703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas" />
+    <SUITE FILE_PATH="coverage/Medioss$burbuja.coverage" NAME="burbuja Coverage Results" MODIFIED="1602172446435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas" />
+    <SUITE FILE_PATH="coverage/Medioss$lista_equipo_electrico.coverage" NAME="lista_equipo_electrico Coverage Results" MODIFIED="1602221821505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas" />
+    <SUITE FILE_PATH="coverage/Medioss$porciento_medios_basicos.coverage" NAME="porciento_medios_basicos Coverage Results" MODIFIED="1602222378350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas" />
+    <SUITE FILE_PATH="coverage/Medioss$util.coverage" NAME="util Coverage Results" MODIFIED="1602107714400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vistas/ui" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/vistas/ventanaa.py" />
+        <option value="$PROJECT_DIR$/vistas/ventanaPrincipal.py" />
+        <option value="$PROJECT_DIR$/vistas/ventana.py" />
+        <option value="$PROJECT_DIR$/vistas/ui/util.py" />
+        <option value="$PROJECT_DIR$/vistas/burbuja.py" />
+        <option value="$PROJECT_DIR$/vistas/lista_mueble.py" />
+        <option value="$PROJECT_DIR$/vistas/lista_responsable.py" />
+        <option value="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectId" id="1iBOI0EMjLQdNk5QXc8Wqtx8zrc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Medioss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Medioss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Medioss" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Medioss" type="462c0819:PsiDirectoryNode" />
+              <item name="vistas" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Trabajos/Hector/Medioss",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Trabajos\Hector\Medioss\vistas" />
+      <recent name="D:\Proyectos_IDES\PycharmProject\Medioss\vistas" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.lista_equipo_electrico">
+    <configuration name="lista_equipo_electrico" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lista_mueble" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/lista_mueble.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lista_responsable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/lista_responsable.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="responsable_may_edad" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/responsable_may_edad.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ventana" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/ventana.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.responsable_may_edad" />
+      <item itemvalue="Python.lista_mueble" />
+      <item itemvalue="Python.lista_responsable" />
+      <item itemvalue="Python.ventana" />
+      <item itemvalue="Python.lista_equipo_electrico" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.lista_equipo_electrico" />
+        <item itemvalue="Python.lista_mueble" />
+        <item itemvalue="Python.lista_responsable" />
+        <item itemvalue="Python.responsable_may_edad" />
+        <item itemvalue="Python.ventana" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="" />
+      <created>1601377435017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601377435017</updated>
+      <workItem from="1601377436377" duration="19188000" />
+      <workItem from="1601415465347" duration="1200000" />
+      <workItem from="1601451574346" duration="9612000" />
+      <workItem from="1601490318776" duration="6248000" />
+      <workItem from="1601544688714" duration="406000" />
+      <workItem from="1601547405467" duration="13000" />
+      <workItem from="1601547511724" duration="439000" />
+      <workItem from="1601551608402" duration="504000" />
+      <workItem from="1601560533500" duration="861000" />
+      <workItem from="1601567527350" duration="7729000" />
+      <workItem from="1601579210594" duration="2124000" />
+      <workItem from="1601589091561" duration="2106000" />
+      <workItem from="1601627592777" duration="3091000" />
+      <workItem from="1601641837786" duration="37000" />
+      <workItem from="1601642958128" duration="235000" />
+      <workItem from="1601643244280" duration="14000" />
+      <workItem from="1601651576729" duration="3780000" />
+      <workItem from="1601655436644" duration="11957000" />
+      <workItem from="1601710331168" duration="2438000" />
+      <workItem from="1601716206535" duration="279000" />
+      <workItem from="1601728781445" duration="2590000" />
+      <workItem from="1601752264556" duration="2043000" />
+      <workItem from="1601823932085" duration="1077000" />
+      <workItem from="1601911616872" duration="1851000" />
+      <workItem from="1475706726594" duration="9846000" />
+      <workItem from="1601995503577" duration="2023000" />
+      <workItem from="1602029906371" duration="6346000" />
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33438486" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3723">
+          <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="37" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/burbuja.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ventana.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/burbuja.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ventana.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="92" lean-forward="true" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+          <folding>
+            <element signature="e#1#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ventana.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ventana.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ventanaPrincipal.py" />
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg" />
+    <entry file="file://$PROJECT_DIR$/vistas/ventanaPrincipal.py" />
+    <entry file="file://$PROJECT_DIR$/vistas/ventanaPrincipal.py" />
+    <entry file="file://$PROJECT_DIR$/vistas/ui/util.py" />
+    <entry file="file://$PROJECT_DIR$/vistas/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/responsable_equipo_may_consumo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/repositorio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/equipo_electrico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/operacion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../hector de la torre/MediosBasicos/vista/dialogo_equipo_electrico.py" />
+    <entry file="file://$PROJECT_DIR$/../../../hector de la torre/MediosBasicos/presentador/presentador_equipo_electrico.py" />
+    <entry file="file://$PROJECT_DIR$/vistas/lista_mueble.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1602152051287" expanded="true" signature="1007:1313" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="2893:2918" ph="SELECT * FRO... responsable" />
+            <marker date="1602152051287" expanded="true" signature="3920:4009" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="4163:4313" ph="insert into mueble... " />
+            <marker date="1602152051287" expanded="true" signature="5500:5589" ph="SELECT respo... responsable" />
+            <marker date="1602152051287" expanded="true" signature="5747:6088" ph="update muebl... " />
+            <marker date="1602152051287" expanded="true" signature="6669:6701" ph="delete from " />
+            <marker date="1602152051287" expanded="true" signature="7662:8053" ph="SELECT muebl... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9621:9693" ph="SELECT * FRO... mueble" />
+            <marker date="1602152051287" expanded="true" signature="9769:9854" ph="SELECT * FRO... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/burbuja.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <marker date="1602107753070" expanded="true" signature="344:369" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_responsable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="198" column="3" lean-forward="false" selection-start-line="198" selection-start-column="3" selection-end-line="199" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#113#0" expanded="true" />
+            <marker date="1602162633444" expanded="true" signature="1116:1141" ph="SELECT * FRO... responsable" />
+            <marker date="1602162633444" expanded="true" signature="3063:3161" ph="insert into responsable... " />
+            <marker date="1602162633444" expanded="true" signature="4441:4707" ph="update respo... " />
+            <marker date="1602162633444" expanded="true" signature="5364:5401" ph="delete from " />
+            <marker date="1602162633444" expanded="true" signature="8015:8100" ph="SELECT r_ci,... responsable" />
+            <marker date="1602162633444" expanded="true" signature="8957:9006" ph="SELECT * FRO... responsable" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/ventana.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="e#1#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/lista_equipo_electrico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#94#0" expanded="true" />
+            <marker date="1602184282390" expanded="true" signature="1054:1340" ph="SELECT ee_id... equipos_electricos" />
+            <marker date="1602184282390" expanded="true" signature="3018:3043" ph="SELECT * FRO... responsable" />
+            <marker date="1602184282390" expanded="true" signature="4080:4169" ph="SELECT respo... responsable" />
+            <marker date="1602184282390" expanded="true" signature="4323:4518" ph="insert into equipos_electricos... " />
+            <marker date="1602184282390" expanded="true" signature="5637:5726" ph="SELECT respo... responsable" />
+            <marker date="1602184282390" expanded="true" signature="5884:6265" ph="update equip... " />
+            <marker date="1602184282390" expanded="true" signature="6858:6903" ph="delete from " />
+            <marker date="1602184282390" expanded="true" signature="8142:8214" ph="SELECT * FRO... mueble" />
+            <marker date="1602184282390" expanded="true" signature="8290:8375" ph="SELECT * FRO... equipos_electricos" />
+            <marker date="1602184282390" expanded="true" signature="9353:9961" ph="SELECT equip... equipos_electricos" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vistas/porciento_medios_basicos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+            <marker date="1602035626000" expanded="true" signature="790:851" ph="SELECT Count... mueble" />
+            <marker date="1602035626000" expanded="true" signature="1009:1079" ph="SELECT Count... mueble" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/medio_basico.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

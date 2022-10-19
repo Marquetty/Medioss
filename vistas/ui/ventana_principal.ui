@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ventana Principal</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGestionar">
+    <property name="title">
+     <string>Gestionar</string>
+    </property>
+    <addaction name="res_acs"/>
+    <addaction name="actionresponsable"/>
+    <addaction name="action_muebles"/>
+    <addaction name="actionEquipos_Electricos"/>
+   </widget>
+   <widget class="QMenu" name="menuReportes">
+    <property name="title">
+     <string>Reportes</string>
+    </property>
+    <addaction name="actionResonsable_may_consumo"/>
+    <addaction name="action_local"/>
+    <addaction name="actionLista_de_responsable_de_edad"/>
+   </widget>
+   <addaction name="menuGestionar"/>
+   <addaction name="menuReportes"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="res_acs">
+   <property name="text">
+    <string>Responsable</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionresponsable">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Responsables</string>
+   </property>
+  </action>
+  <action name="action_muebles">
+   <property name="text">
+    <string>Muebles</string>
+   </property>
+  </action>
+  <action name="actionEquipos_Electricos">
+   <property name="text">
+    <string>Equipos Electricos</string>
+   </property>
+  </action>
+  <action name="actionResonsable_may_consumo">
+   <property name="text">
+    <string>Responsable por equipo de mayor consumo</string>
+   </property>
+  </action>
+  <action name="action_local">
+   <property name="text">
+    <string>Porciento de medios basico de un local por material</string>
+   </property>
+  </action>
+  <action name="actionLista_de_responsable_de_edad">
+   <property name="text">
+    <string>Lista de responsablemayoresd de una edad</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
