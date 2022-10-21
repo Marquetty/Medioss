@@ -13,6 +13,7 @@ from modelo.equipo_electrico import EquipoElectrico
 
 class DialogoEquiposElectricos(QDialog):
     total=[]
+    numInventarioGloabal=0
     def __init__(self):
         QDialog.__init__(self)
         uic.loadUi("ui/lista_equipos_electricos.ui", self)
@@ -140,22 +141,24 @@ class DialogoEquiposElectricos(QDialog):
                 row = row + 1
             cursor.close()
             con.close()
-            "asd"
+
 
     def insertar_equipos_electricos(self):
         try:
-            nume_invetario = self.spin_inventario.text()
+            nume = self.spin_inventario.text()
+            nume_invetario=int(nume)
             nom_objeto = self.txt_nom_objeto.text()
             fecha = self.fecha.text()
+            fecha_dt = datetime.strptime(fecha, '%d-%m-%Y')
             nom_local = self.txt_nom_local.text()
             responsable = self.combo_responsable.currentText()
-            consumo = self.spin_consumo.text()
-            voltaje = self.combo_voltaje.currentText()
+            consumo = int(self.spin_consumo.text())
+            voltaje = int(self.combo_voltaje.currentText())
             marca = self.comboBox_marca.currentText()
             modelo = self.comboBox_modelo.currentText()
             variables = responsable.split('-')
             self.validar()
-            self.existe_medio_basico(nume_invetario)
+            self.existe_medio_basico(nume)
             con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
             cursor = con.cursor()
             sql = "SELECT responsable.r_id, responsable.r_nombre FROM responsable WHERE responsable.r_ci =%s"
@@ -164,10 +167,10 @@ class DialogoEquiposElectricos(QDialog):
             respon = res[0][0]
             query = (
                 "insert into equipos_electricos(ee_numero_inventario, ee_fecha,ee_nombre_objeto, ee_nombre_local, ee_ci_responsable,\
-             ee_consumo,ee_voltaje,ee_marca,ee_modelo) values (%s,%s,%s,%s,%s,%s,%s,%s)")
-            cursor.execute(query,
-                           (nume_invetario, fecha, nom_objeto, nom_local, respon, consumo, voltaje, marca, modelo))
+             ee_consumo,ee_voltaje,ee_marca,ee_modelo) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)")
+            cursor.execute(query,(nume_invetario, fecha_dt, nom_objeto, nom_local, respon, consumo, voltaje, marca, modelo))
             con.commit()
+
             self.cargar_tabla()
 
         except Exception as e:
@@ -178,15 +181,18 @@ class DialogoEquiposElectricos(QDialog):
             ind = self.table.currentRow()
             if ind == -1:
                 raise Exception("Debe Seleccionar una Fila")
-            id = self.table.item(ind, 0).text()
-            nume_invetario = self.spin_inventario.text()
+            id = self.numInventarioGloabal
+            nume = self.spin_inventario.text()
+            nume_invetario = int(nume)
             nom_objeto = self.txt_nom_objeto.text()
+            fecha = self.fecha.text()
+            fecha_dt = datetime.strptime(fecha, '%d-%m-%Y')
             nom_local = self.txt_nom_local.text()
             responsable = self.combo_responsable.currentText()
-            consumo = self.spin_consumo.text()
-            voltaje = self.combo_voltaje.currentText()
-            marca = self.comboBox_marca.text()
-            modelo = self.txt_modelo.text()
+            consumo = int(self.spin_consumo.text())
+            voltaje = int(self.combo_voltaje.currentText())
+            marca = self.comboBox_marca.currentText()
+            modelo = self.comboBox_modelo.currentText()
             variables = responsable.split('-')
             self.validar()
             con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
@@ -195,11 +201,9 @@ class DialogoEquiposElectricos(QDialog):
             cursor.execute(sql, variables[0])
             res = cursor.fetchall()
             respon = res[0][0]
-            query = (
-                    "update equipos_electricos set ee_numero_inventario='" + nume_invetario + "',ee_nombre_objeto='" + nom_objeto + "',\
-                  ee_nombre_local='" + nom_local + "',ee_ci_responsable='" + str(
-                respon) + "',ee_consumo='" + consumo + "',\
-                  ee_voltaje='" + voltaje + "',ee_marca='" + marca + "',ee_modelo='" + modelo + "' where ee_id='" + id + "'")
+            query = ("update equipos_electricos set ee_numero_inventario ='" + str(nume_invetario) + "',ee_fecha ='" + str(fecha_dt) + "',ee_nombre_objeto ='" + nom_objeto + "',\
+                  ee_nombre_local='" + nom_local + "',ee_ci_responsable='" + str (respon) + "',ee_consumo='" + str(consumo) + "', \
+                  ee_voltaje='" + str(voltaje) + "',ee_marca='" + marca + "',ee_modelo='" + modelo + "' where ee_id='" + str(id) + "'")
 
             cursor.execute(query)
             con.commit()
@@ -214,12 +218,11 @@ class DialogoEquiposElectricos(QDialog):
             buttons=QMessageBox.Yes | QMessageBox.No,
             defaultButton=QMessageBox.No)
         if dialogo == QMessageBox.Yes:
-
             try:
                 ind = self.table.currentRow()
                 if ind == -1:
                     raise Exception("Debe seleccionar fila")
-                id = self.table.item(ind, 0).text()
+                id = self.numInventarioGloabal
                 con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
                 cursor = con.cursor()
                 query = ("delete from equipos_electricos where ee_id=%s")
@@ -275,8 +278,7 @@ class DialogoEquiposElectricos(QDialog):
         self.combo_responsable.setCurrentIndex(0)
         self.spin_consumo.setValue(0)
         self.combo_voltaje.setCurrentIndex(0)
-        self.txt_marca.setText("")
-        self.txt_modelo.setText("")
+
 
     def llenar_formulario(self):
         ind = self.table.currentRow()
@@ -287,26 +289,26 @@ class DialogoEquiposElectricos(QDialog):
                 numero_inventario = self.table.item(ind, 0).text()
                 con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
                 cursor = con.cursor()
-                query = ("SELECT equipos_electricos.ee_numero_inventario, equipos_electricos.ee_fecha, "
+                query = ("SELECT equipos_electricos.ee_id,equipos_electricos.ee_numero_inventario, equipos_electricos.ee_fecha, "
                          "equipos_electricos.ee_nombre_objeto, equipos_electricos.ee_nombre_local, "
                          "equipos_electricos.ee_ci_responsable,equipos_electricos.ee_consumo,"
                          "equipos_electricos.ee_voltaje, equipos_electricos.ee_marca, equipos_electricos.ee_modelo, "
                          "responsable.r_ci, responsable.r_nombre FROM equipos_electricos "
                          "INNER JOIN responsable ON equipos_electricos.ee_ci_responsable = responsable.r_id    WHERE ee_numero_inventario = %s")
-
                 cursor.execute(query, (numero_inventario))
                 EquiposElectricos = cursor.fetchone()
-                self.spin_inventario.setValue(int(EquiposElectricos[0]))
-                fecha = EquiposElectricos[1].isoformat()
+                self.numInventarioGloabal=EquiposElectricos[0]
+                self.spin_inventario.setValue(int(EquiposElectricos[1]))
+                fecha = EquiposElectricos[2].isoformat()
                 fecha_dt = datetime.strptime(fecha, '%Y-%m-%d')
                 self.fecha.setDate(fecha_dt)
-                self.txt_nom_objeto.setText(EquiposElectricos[2])
-                self.txt_nom_local.setText(EquiposElectricos[3])
-                self.combo_responsable.setCurrentText(EquiposElectricos[9] + "-" + EquiposElectricos[10])
-                self.spin_consumo.setValue(int(EquiposElectricos[5]))
-                self.combo_voltaje.setCurrentText(str(EquiposElectricos[6]))
-                self.comboBox_marca.setCurrentText(EquiposElectricos[7])
-                self.comboBox_modelo.setCurrentText(EquiposElectricos[8])
+                self.txt_nom_objeto.setText(EquiposElectricos[3])
+                self.txt_nom_local.setText(EquiposElectricos[4])
+                self.combo_responsable.setCurrentText(EquiposElectricos[10] + "-" + EquiposElectricos[11])
+                self.spin_consumo.setValue(int(EquiposElectricos[6]))
+                self.combo_voltaje.setCurrentText(str(EquiposElectricos[7]))
+                self.comboBox_marca.setCurrentText(EquiposElectricos[8])
+                self.comboBox_modelo.setCurrentText(EquiposElectricos[9])
 
                 con.commit()
                 cursor.close()

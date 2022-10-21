@@ -1,69 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Medioss.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Lenovo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/medios_basicos.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/Departamento.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/equipo_electrico.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/estado_mueble.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/medio_basico.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/mueble.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/operacion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/operacion_actualizacion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/operacion_alta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/operacion_cambio_local.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/operacion_cambio_responsble.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/repositorio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/responsable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/servicios_entidad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/tipo_medio_basicos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modelo/tipo_operacion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/Loguin.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/Muebles.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ReportesResponsable.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/burbuja.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/equipo_x_marcas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/hoja.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/1491313938-close_82982.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/4105943-accounts-group-people-user-user-group-users_113923.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/Plus_36851.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/Windows_Close_Program_22531.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/Windows_Messenger_22559.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/help_question_1566.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/iconfinder-trash-4341321_120557.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/record_operations_icon_216630.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/table_icon-icons.com_69867.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/iconos/vcsupdaterequired_93493.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/lista_mayor_consumo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/lista_mueble.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/lista_responsable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/loguin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/porciento_medios_basicos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/reportes/reporte_e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/reportes/reporte_ee.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/responsable_equipo_may_consumo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/responsable_may_edad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/Loguin.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/lista_responsable.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/porciento_medios_basicos.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/responsable_may_cosumo.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/responsable_may_edad.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ui/ventana_principal.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/ventana.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/~$ctor de la torre informe del proyecto final .docx" afterDir="false" />
+    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="hhuuh">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,14 +121,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Trabajos/Hector/Medioss",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Trabajos/Hector/Medioss&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Trabajos\Hector\Medioss\vistas" />
@@ -356,6 +298,14 @@
       <workItem from="1601995503577" duration="2023000" />
       <workItem from="1602029906371" duration="6346000" />
     </task>
+    <task id="LOCAL-00001" summary="hhuuh">
+      <created>1666189973310</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666189973310</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -396,8 +346,9 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hhuuh" />
+    <option name="LAST_COMMIT_MESSAGE" value="hhuuh" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
