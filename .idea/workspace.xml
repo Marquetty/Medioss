@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="hhuuh">
+    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="Equipos Electricos actualizado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/lista_mueble.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_mueble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,7 @@
       <recent name="D:\Proyectos_IDES\PycharmProject\Medioss\vistas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lista_equipo_electrico">
+  <component name="RunManager" selected="Python.lista_mueble">
     <configuration name="lista_equipo_electrico" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Medioss" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -251,8 +250,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lista_equipo_electrico" />
         <item itemvalue="Python.lista_mueble" />
+        <item itemvalue="Python.lista_equipo_electrico" />
         <item itemvalue="Python.lista_responsable" />
         <item itemvalue="Python.responsable_may_edad" />
         <item itemvalue="Python.ventana" />
@@ -305,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666189973310</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Equipos Electricos actualizado">
+      <created>1666332593113</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666332593113</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -348,7 +354,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hhuuh" />
-    <option name="LAST_COMMIT_MESSAGE" value="hhuuh" />
+    <MESSAGE value="Equipos Electricos actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Equipos Electricos actualizado" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

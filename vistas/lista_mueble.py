@@ -13,6 +13,7 @@ from modelo.mueble import Mueble
 
 class DialogoMuebles(QDialog):
     total=[]
+    idMuebleGlobal=0
     def __init__(self):
         QDialog.__init__(self)
         uic.loadUi("ui/lista_mueble.ui", self)
@@ -86,11 +87,13 @@ class DialogoMuebles(QDialog):
         try:
             nume_invetario = self.spin_inventario.text()
             nom_objeto = self.txt_nom_objeto.text()
+            fecha = self.fecha.text()
+            fecha_dt = datetime.strptime(fecha, '%d-%M-%Y')
             nom_local = self.txt_nom_local.text()
             responsable = self.combo_responsable.currentText()
-            descripcion = self.txt_descripcion.text()
+            descripcion = str(self.txt_descripcion.toPlainText())
             estado = self.combo_estado.currentText()
-            material = self.txt_material.text()
+            material = self.txt_material.currentText()
             self.validar_controles()
             self.existe_medio_basico(nume_invetario)
             variables = responsable.split('-')
@@ -101,8 +104,8 @@ class DialogoMuebles(QDialog):
             res = cursor.fetchall()
             respon = res[0][0]
             query = (
-                "insert into mueble(m_numero_inventario,m_nombre_objeto,m_nombre_local,m_ci_responsable,m_descripcion,m_estado,m_matrial) values (%s,%s,%s,%s,%s,%s,%s)")
-            cursor.execute(query, (nume_invetario, nom_objeto, nom_local, respon, descripcion, estado, material))
+                "insert into mueble(m_numero_inventario,m_fecha,m_nombre_objeto,m_nombre_local,m_ci_responsable,m_descripcion,m_estado,m_matrial) values (%s,%s,%s,%s,%s,%s,%s,%s)")
+            cursor.execute(query, (nume_invetario, fecha_dt,nom_objeto, nom_local, respon, descripcion, estado, material))
             con.commit()
             self.cargar_tabla()
             self.restablecer_controles()
@@ -111,32 +114,31 @@ class DialogoMuebles(QDialog):
 
     def modificar_muebles(self):
         nume_invetario = self.spin_inventario.text()
+        fecha = self.fecha.text()
+        fecha_dt = datetime.strptime(fecha, '%d-%M-%Y')
         nom_objeto = self.txt_nom_objeto.text()
         nom_local = self.txt_nom_local.text()
         responsable = self.combo_responsable.currentText()
-        descripcion = self.txt_descripcion.text()
+        descripcion = str(self.txt_descripcion.toPlainText())
         estado = self.combo_estado.currentText()
-        material = self.txt_material.text()
+        material = self.txt_material.currentText()
         variables = responsable.split('-')
         try:
             ind = self.table.currentRow()
             if ind == -1:
                 raise Exception("Debe Seleccionar una Fila")
-            # tomamos el id desde la tabla
-            id = self.table.item(ind, 0).text()
+            id = self.idMuebleGlobal
             self.validar_controles()
-            # self.existe_medio_basico(nume_invetario)
+            self.existe_medio_basico(nume_invetario)
             con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
             cursor = con.cursor()
             sql = "SELECT responsable.r_id, responsable.r_nombre FROM responsable WHERE responsable.r_ci =%s"
             cursor.execute(sql, variables[0])
             res = cursor.fetchall()
             respon = res[0][0]
-            query = (
-                    "update mueble set m_numero_inventario='" + nume_invetario + "',m_nombre_objeto='" + nom_objeto + "',\
-                m_nombre_local='" + nom_local + "',m_ci_responsable='" + str(
-                respon) + "',m_descripcion='" + descripcion + "',\
-                m_estado='" + estado + "',m_matrial='" + material + "' where m_id='" + id + "'")
+            query = ("update mueble set m_numero_inventario='" + nume_invetario + "',m_fecha='" + str(fecha_dt) + "',m_nombre_objeto='" + nom_objeto + "',\
+                m_nombre_local='" + nom_local + "',m_ci_responsable='" + str(respon) + "',m_descripcion='" + descripcion + "',\
+                m_estado='" + estado + "',m_matrial='" + material + "' where m_id='" + str(id)+ "'")
 
             cursor.execute(query)
             con.commit()
@@ -155,7 +157,7 @@ class DialogoMuebles(QDialog):
                 ind = self.table.currentRow()
                 if ind == -1:
                     raise Exception("Debe seleccionar fila")
-                id = self.table.item(ind, 0).text()
+                id = self.idMuebleGlobal
                 con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
                 cursor = con.cursor()
                 query = ("delete from mueble where m_id=%s")
@@ -177,7 +179,7 @@ class DialogoMuebles(QDialog):
         self.combo_responsable.setCurrentIndex(0)
         self.txt_descripcion.setText("")
         self.combo_estado.setCurrentIndex(0)
-        self.txt_material.setText("")
+        self.txt_material.setCurrentIndex(0)
 
     def llenar_formulario(self):
         ind = self.table.currentRow()
@@ -188,22 +190,23 @@ class DialogoMuebles(QDialog):
                 id = self.table.item(ind, 0).text()
                 con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
                 cursor = con.cursor()
-                query = ("SELECT mueble.m_id, mueble.m_numero_inventario, mueble.m_nombre_objeto,"
+                query = ("SELECT mueble.m_id, mueble.m_numero_inventario,mueble.m_fecha, mueble.m_nombre_objeto,"
                          " mueble.m_nombre_local,mueble.m_ci_responsable,mueble.m_descripcion,"
                          "mueble.m_estado, mueble.m_matrial,responsable.r_nombre,responsable.r_ci "
-                         "FROM mueble INNER JOIN responsable ON mueble.m_ci_responsable = responsable.r_id WHERE m_id = %s")
+                         "FROM mueble INNER JOIN responsable ON mueble.m_ci_responsable = responsable.r_id WHERE m_numero_inventario = %s")
                 cursor.execute(query, (id))
                 mueble = cursor.fetchone()
+                self.idMuebleGlobal=mueble[0]
                 self.spin_inventario.setValue(int(mueble[1]))
-                fecha = mueble[1].isoformat()
+                fecha = mueble[2].isoformat()
                 fecha_dt = datetime.strptime(fecha, '%Y-%m-%d')
                 self.fecha.setDate(fecha_dt)
-                self.txt_nom_objeto.setText(mueble[2])
-                self.txt_nom_local.setText(mueble[3])
-                self.combo_responsable.setCurrentText(mueble[9] + "-" + mueble[8])
-                self.txt_descripcion.setText(mueble[5])
-                self.combo_estado.setCurrentText(mueble[6])
-                self.txt_material.setText(mueble[7])
+                self.txt_nom_objeto.setText(mueble[3])
+                self.txt_nom_local.setText(mueble[4])
+                self.combo_responsable.setCurrentText(mueble[10] + "-" + mueble[9])
+                self.txt_descripcion.setText(mueble[6])
+                self.combo_estado.setCurrentText(mueble[7])
+                self.txt_material.setCurrentText(mueble[8])
                 con.commit()
                 cursor.close()
                 con.close()
