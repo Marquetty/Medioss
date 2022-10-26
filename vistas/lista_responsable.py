@@ -9,7 +9,7 @@ from modelo.responsable import Responsable
 
 
 class DialogoResponsable(QDialog):
-    total=[]
+    total = []
     def __init__(self):
         QDialog.__init__(self)
         uic.loadUi("ui/lista_responsable.ui", self)

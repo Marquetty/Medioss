@@ -7,9 +7,7 @@ import pymysql
 import sys
 from PyQt5 import uic
 from fpdf import FPDF
-
 from modelo.equipo_electrico import EquipoElectrico
-
 
 class DialogoEquiposElectricos(QDialog):
     total=[]
@@ -31,10 +29,11 @@ class DialogoEquiposElectricos(QDialog):
 
     def cargar_tabla(self):
         self.vaciar_tabla()
+
         con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
         cursor = con.cursor()
-        voltaje = con.open
-        if voltaje == False:
+        conn = con.open
+        if conn == False:
             print("no")
         else:
             sql = "SELECT ee_id, ee_numero_inventario,ee_fecha, \

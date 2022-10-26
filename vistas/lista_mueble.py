@@ -129,7 +129,7 @@ class DialogoMuebles(QDialog):
                 raise Exception("Debe Seleccionar una Fila")
             id = self.idMuebleGlobal
             self.validar_controles()
-            self.existe_medio_basico(nume_invetario)
+            #self.existe_medio_basico(nume_invetario)
             con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
             cursor = con.cursor()
             sql = "SELECT responsable.r_id, responsable.r_nombre FROM responsable WHERE responsable.r_ci =%s"
