@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 
-def grafico():
+def grafico_material():
     con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
     cursor = con.cursor()
     estado = con.open
@@ -50,4 +50,4 @@ def grafico():
             print("NO se puede hacer")
 
 
-grafico()
+grafico_material()

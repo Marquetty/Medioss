@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="muebles actualizado">
-      <change afterPath="$PROJECT_DIR$/modelo/marca_modelo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/Graffivo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vistas/lista_modelo_marca.py" afterDir="false" />
+    <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="grafico">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/lista_mueble.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_mueble.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/lista_responsable.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_responsable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/Graffivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/graficos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/loguin.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/loguin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/Loguin.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/Loguin.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/ventana_principal.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/ventana_principal.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ventana.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ventana.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,8 +138,8 @@
       <recent name="D:\Proyectos_IDES\PycharmProject\Medioss\vistas" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Graffivo">
-    <configuration name="Graffivo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.loguin">
+    <configuration name="graficos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Medioss" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,7 +151,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/Graffivo.py" />
+      <option name="SCRIPT_NAME" value="D:\Trabajos\Hector\Medioss\vistas\graficos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,27 +181,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lista_modelo_marca (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Medioss" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/lista_modelo_marca.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="lista_mueble" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Medioss" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,6 +194,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/lista_mueble.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="loguin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/loguin.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -247,19 +245,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Graffivo" />
+      <item itemvalue="Python.loguin" />
       <item itemvalue="Python.lista_equipo_electrico" />
-      <item itemvalue="Python.lista_modelo_marca (1)" />
       <item itemvalue="Python.lista_mueble" />
       <item itemvalue="Python.ventana" />
+      <item itemvalue="Python.graficos" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Graffivo" />
-        <item itemvalue="Python.lista_mueble" />
-        <item itemvalue="Python.lista_equipo_electrico" />
-        <item itemvalue="Python.lista_modelo_marca (1)" />
+        <item itemvalue="Python.loguin" />
         <item itemvalue="Python.ventana" />
+        <item itemvalue="Python.lista_equipo_electrico" />
+        <item itemvalue="Python.graficos" />
+        <item itemvalue="Python.lista_mueble" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666372700078</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="grafico">
+      <created>1666762678905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666762678906</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -368,7 +373,8 @@
     <MESSAGE value="hhuuh" />
     <MESSAGE value="Equipos Electricos actualizado" />
     <MESSAGE value="muebles actualizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="muebles actualizado" />
+    <MESSAGE value="grafico" />
+    <option name="LAST_COMMIT_MESSAGE" value="grafico" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

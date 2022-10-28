@@ -40,8 +40,15 @@
     <addaction name="action_local"/>
     <addaction name="actionLista_de_responsable_de_edad"/>
    </widget>
+   <widget class="QMenu" name="menuCuenta">
+    <property name="title">
+     <string>Cuenta</string>
+    </property>
+    <addaction name="actionCerrar_cesi_n"/>
+   </widget>
    <addaction name="menuGestionar"/>
    <addaction name="menuReportes"/>
+   <addaction name="menuCuenta"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="res_acs">
@@ -71,18 +78,32 @@
    </property>
   </action>
   <action name="actionResonsable_may_consumo">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Responsable por equipo de mayor consumo</string>
    </property>
   </action>
   <action name="action_local">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Porciento de medios basico de un local por material</string>
    </property>
   </action>
   <action name="actionLista_de_responsable_de_edad">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Lista de responsablemayoresd de una edad</string>
+   </property>
+  </action>
+  <action name="actionCerrar_cesi_n">
+   <property name="text">
+    <string>Cerrar cesión</string>
    </property>
   </action>
  </widget>

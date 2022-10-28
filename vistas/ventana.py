@@ -4,7 +4,6 @@ from PyQt5 import uic
 import sys
 import pymysql
 
-
 from vistas.lista_responsable import DialogoResponsable
 from vistas.lista_equipo_electrico import DialogoEquiposElectricos
 from vistas.lista_mueble import DialogoMuebles
@@ -13,14 +12,15 @@ from vistas.responsable_equipo_may_consumo import ResponsableMayConsumo
 from vistas.responsable_may_edad import ResponsableMayEdad
 
 
-
-
 class ventana_principal(QMainWindow):
 
-    def __init__(self):
+    def __init__(self, text, parent=None):
         QMainWindow.__init__(self)
+        super(ventana_principal, self).__init__()
         uic.loadUi("ui/ventana_principal.ui", self)
-
+        self.parent = parent
+        self.text = text
+        self.administrador()
         self.dialogo_resposanble = DialogoResponsable()
         self.resposanble_may_consumo = ResponsableMayConsumo()
         self.dialogo_equipos_electricos = DialogoEquiposElectricos()
@@ -51,6 +51,12 @@ class ventana_principal(QMainWindow):
 
     def abrirResponsableMayEdad(self):
         self.mayoredad.exec()
+
+    def administrador(self):
+        if self.text != "Administrador":
+            self.actionResonsable_may_consumo.setEnabled(False)
+            self.action_local.setEnabled(False)
+            self.actionLista_de_responsable_de_edad.setEnabled(False)
 
 
 if __name__ == "__main__":
