@@ -76,34 +76,37 @@ class ResponsableMayEdad(QDialog):
         self.exportar(self.total)
 
     def exportar(self,lista_tabla):
-        pdf = FPDF(orientation='P', unit='mm', format='A4')
-        pdf.add_page()
-        # Texto
-        pdf.set_font('Arial', '', 13)
+        try:
+            pdf = FPDF(orientation='P', unit='mm', format='A4')
+            pdf.add_page()
+            # Texto
+            pdf.set_font('Arial', '', 13)
 
-        # Titulo
-        pdf.cell(w=30, h=15, txt='Reporte', border=1, ln=1, align='C', fill=0)
+            # Titulo
+            pdf.cell(w=30, h=15, txt='Reporte', border=1, ln=1, align='C', fill=0)
 
-        # encabezado
-        pdf.cell(w=10, h=15, txt="ID", border=1, align='C', fill=0)
-        pdf.cell(w=40, h=15, txt="C. de Identidad", border=1, align='C', fill=0)
-        pdf.cell(w=20, h=15, txt="Nombre", border=1, align='C', fill=0)
-        pdf.cell(w=20, h=15, txt="edad", border=1, align='C', fill=0)
-        pdf.cell(w=25, h=15, txt="Sexo", border=1, align='C', fill=0)
-        pdf.cell(w=50, h=15, txt="Rol", border=1, align='C', fill=0)
-        pdf.multi_cell(w=30, h=15, txt="Ocupacion", border=1, align='C', fill=0)
-        val = 1
-        for valor in lista_tabla:
-            pdf.cell(w=10, h=15, txt=str(val), border=1, align='C', fill=0)
-            pdf.cell(w=40, h=15, txt=str(valor[1]), border=1, align='C', fill=0)
-            pdf.cell(w=20, h=15, txt=valor[2], border=1, align='C', fill=0)
-            pdf.cell(w=20, h=15, txt=str(valor[3]), border=1, align='C', fill=0)
-            pdf.cell(w=25, h=15, txt=valor[4], border=1, align='C', fill=0)
-            pdf.cell(w=50, h=15, txt=valor[5], border=1, align='C', fill=0)
-            pdf.multi_cell(w=30, h=15, txt=valor[6], border=1, align='C', fill=0)
-            val = val + 1
-        pdf.output('ResponsableDeMayorEdad.pdf')
-        self.mostrar_mensaje("pdf exportado correctamente")
+            # encabezado
+            pdf.cell(w=10, h=15, txt="ID", border=1, align='C', fill=0)
+            pdf.cell(w=40, h=15, txt="C. de Identidad", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Nombre", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="edad", border=1, align='C', fill=0)
+            pdf.cell(w=25, h=15, txt="Sexo", border=1, align='C', fill=0)
+            pdf.cell(w=50, h=15, txt="Rol", border=1, align='C', fill=0)
+            pdf.multi_cell(w=30, h=15, txt="Ocupacion", border=1, align='C', fill=0)
+            val = 1
+            for valor in lista_tabla:
+                pdf.cell(w=10, h=15, txt=str(val), border=1, align='C', fill=0)
+                pdf.cell(w=40, h=15, txt=str(valor[1]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=valor[2], border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[3]), border=1, align='C', fill=0)
+                pdf.cell(w=25, h=15, txt=valor[4], border=1, align='C', fill=0)
+                pdf.cell(w=50, h=15, txt=valor[5], border=1, align='C', fill=0)
+                pdf.multi_cell(w=30, h=15, txt=valor[6], border=1, align='C', fill=0)
+                val = val + 1
+            pdf.output('ResponsableDeMayorEdad.pdf')
+            self.mostrar_mensaje("pdf exportado correctamente")
+        except Exception as e:
+            self.mostrar_error("Por favor cierre el pdf")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

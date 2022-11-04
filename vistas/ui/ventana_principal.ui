@@ -39,12 +39,13 @@
     <addaction name="actionResonsable_may_consumo"/>
     <addaction name="action_local"/>
     <addaction name="actionLista_de_responsable_de_edad"/>
+    <addaction name="actionGrafico_de_Mueble_por_material"/>
    </widget>
    <widget class="QMenu" name="menuCuenta">
     <property name="title">
      <string>Cuenta</string>
     </property>
-    <addaction name="actionCerrar_cesi_n"/>
+    <addaction name="actionCerrar_cesion"/>
    </widget>
    <addaction name="menuGestionar"/>
    <addaction name="menuReportes"/>
@@ -98,12 +99,17 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Lista de responsablemayoresd de una edad</string>
+    <string>Lista de responsable mayor de una edad</string>
    </property>
   </action>
-  <action name="actionCerrar_cesi_n">
+  <action name="actionCerrar_cesion">
    <property name="text">
     <string>Cerrar cesión</string>
+   </property>
+  </action>
+  <action name="actionGrafico_de_Mueble_por_material">
+   <property name="text">
+    <string>Grafico de Mueble por material</string>
    </property>
   </action>
  </widget>

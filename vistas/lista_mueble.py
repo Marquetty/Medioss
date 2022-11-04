@@ -308,38 +308,40 @@ class DialogoMuebles(QDialog):
         QMessageBox.information(self, 'Export', msg)
 
     def exportar(self, lista_tabla):
-        pdf = FPDF(orientation='P', unit='mm', format='A4')
-        pdf.add_page()
-        # Texto
-        pdf.set_font('Arial', '', 13)
-        # Titulo
-        pdf.cell(w=60, h=15, txt='Reporte de Muebles', border=1, ln=1, align='C', fill=0)
-        # encabezado
-        pdf.cell(w=10, h=15, txt="ID", border=1, align='C', fill=0)
-        pdf.cell(w=20, h=15, txt="No. Inve", border=1, align='C', fill=0)
-        pdf.cell(w=30, h=15, txt="Fecha", border=1, align='C', fill=0)
-        pdf.cell(w=20, h=15, txt="Nom del Ob", border=1, align='C', fill=0)
-        pdf.cell(w=20, h=15, txt="Nom del local", border=1, align='C', fill=0)
-        pdf.cell(w=25, h=15, txt="Responsable", border=1, align='C', fill=0)
-        pdf.cell(w=20, h=15, txt="Descripcion", border=1, align='C', fill=0)
-        pdf.cell(w=30, h=15, txt="Estado", border=1, align='C', fill=0)
-        pdf.multi_cell(w=20, h=15, txt="Material", border=1, align='C', fill=0)
-        val = 1
-        for valor in lista_tabla:
+        try:
+            pdf = FPDF(orientation='P', unit='mm', format='A4')
+            pdf.add_page()
+            # Texto
+            pdf.set_font('Arial', '', 13)
+            # Titulo
+            pdf.cell(w=60, h=15, txt='Reporte de Muebles', border=1, ln=1, align='C', fill=0)
+            # encabezado
+            pdf.cell(w=10, h=15, txt="ID", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="No. Inve", border=1, align='C', fill=0)
+            pdf.cell(w=30, h=15, txt="Fecha", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Nom del Ob", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Nom del local", border=1, align='C', fill=0)
+            pdf.cell(w=25, h=15, txt="Responsable", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Descripcion", border=1, align='C', fill=0)
+            pdf.cell(w=30, h=15, txt="Estado", border=1, align='C', fill=0)
+            pdf.multi_cell(w=20, h=15, txt="Material", border=1, align='C', fill=0)
+            val = 1
+            for valor in lista_tabla:
 
-            pdf.cell(w=10, h=15, txt=str(val), border=1, align='C', fill=0)
-            pdf.cell(w=20, h=15, txt=str(valor[1]), border=1, align='C', fill=0)
-            pdf.cell(w=30, h=15, txt=str(valor[2]), border=1, align='C', fill=0)
-            pdf.cell(w=20, h=15, txt=str(valor[3]), border=1, align='C', fill=0)
-            pdf.cell(w=20, h=15, txt=str(valor[4]), border=1, align='C', fill=0)
-            pdf.cell(w=25, h=15, txt=str(valor[9]), border=1, align='C', fill=0)
-            pdf.cell(w=20, h=15, txt=str(valor[6]), border=1, align='C', fill=0)
-            pdf.cell(w=30, h=15, txt=str(valor[7]), border=1, align='C', fill=0)
-            pdf.multi_cell(w=20, h=15, txt=str(valor[8]), border=1, align='C', fill=0)
-            val = val + 1
-        pdf.output('Muebles.pdf')
-        self.mostrar_mensaje("pdf exportado correctamente")
-
+                pdf.cell(w=10, h=15, txt=str(val), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[1]), border=1, align='C', fill=0)
+                pdf.cell(w=30, h=15, txt=str(valor[2]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[3]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[4]), border=1, align='C', fill=0)
+                pdf.cell(w=25, h=15, txt=str(valor[9]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[6]), border=1, align='C', fill=0)
+                pdf.cell(w=30, h=15, txt=str(valor[7]), border=1, align='C', fill=0)
+                pdf.multi_cell(w=20, h=15, txt=str(valor[8]), border=1, align='C', fill=0)
+                val = val + 1
+            pdf.output('Muebles.pdf')
+            self.mostrar_mensaje("pdf exportado correctamente")
+        except Exception as e:
+            self.mostrar_error("Por favor cierre el pdf")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -67,6 +67,11 @@ class Loguin(QDialog):
         if len(self.le_pass.text()) == 0:
             raise Exception(msg.format("contraseña"))
 
+
+
+
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     GUI = Loguin()
