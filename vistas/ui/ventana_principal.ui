@@ -31,6 +31,8 @@
     <addaction name="actionresponsable"/>
     <addaction name="action_muebles"/>
     <addaction name="actionEquipos_Electricos"/>
+    <addaction name="actionEquipos_de_Combustion"/>
+    <addaction name="actionUsuarios"/>
    </widget>
    <widget class="QMenu" name="menuReportes">
     <property name="title">
@@ -110,6 +112,16 @@
   <action name="actionGrafico_de_Mueble_por_material">
    <property name="text">
     <string>Grafico de Mueble por material</string>
+   </property>
+  </action>
+  <action name="actionEquipos_de_Combustion">
+   <property name="text">
+    <string>Equipos de Combustion</string>
+   </property>
+  </action>
+  <action name="actionUsuarios">
+   <property name="text">
+    <string>Usuarios</string>
    </property>
   </action>
  </widget>

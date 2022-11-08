@@ -1,3 +1,5 @@
+import hashlib
+
 from PyQt5.QtWidgets import QMainWindow, QApplication, \
     QDialog, QTableWidgetItem, QTableWidget, QMessageBox, QAction
 from PyQt5 import uic
@@ -28,6 +30,7 @@ class Loguin(QDialog):
             self.mostrar_error(e.args[0])
 
     def buscar_user(self, usser,passw):
+            contra=self.cifrarConstranna(passw)
             con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
             cursor = con.cursor()
             estado = con.open
@@ -41,7 +44,7 @@ class Loguin(QDialog):
                     rol = user[0][2]
                     self.rol_usuario = rol
                     pas_sql = "select * from usuario where password_usuario=%s"
-                    cursor.execute(pas_sql,passw)
+                    cursor.execute(pas_sql,contra)
                     passs = cursor.fetchall()
                     cursor.close()
                     if passs.__len__() == 0:
@@ -52,7 +55,10 @@ class Loguin(QDialog):
                 else:
                     raise Exception("Usuaior no entontrado")
 
-
+    def cifrarConstranna(self,contrasenna):
+        clave = contrasenna.encode('utf-8')
+        letra = hashlib.sha1(clave).hexdigest()
+        return letra
     def mostrar_error(self, msg):
         QMessageBox.critical(self, 'Error', msg)
 

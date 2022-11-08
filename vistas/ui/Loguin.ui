@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Autenticar</string>
   </property>
   <widget class="QLabel" name="l_fondo">
    <property name="geometry">
@@ -120,6 +120,9 @@ border-bottom: 2px solid rgba(46,82,101,255);
 color:rgba(0,0,0,200);
 padding-bottom:7px;</string>
    </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
    <property name="placeholderText">
     <string>Contraseña</string>
    </property>
@@ -127,27 +130,14 @@ padding-bottom:7px;</string>
   <widget class="QPushButton" name="btn_iniciar">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>380</x>
      <y>320</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Ingresar</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>320</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Registrar</string>
+    <string>Aceptar</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">

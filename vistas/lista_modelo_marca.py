@@ -75,6 +75,7 @@ class Marca_modelo(QDialog):
             self.table_model.removeRow(0)
 
     def insertar_marca_modelo(self):
+
         try:
             marca = self.txt_marca.text()
             modelo = self.txt_modelo.text()
@@ -124,6 +125,61 @@ class Marca_modelo(QDialog):
                 self.cargar_tabla_marca()
         except Exception as e:
             self.mostrar_error(e.args[0])
+
+
+    def actulizar(self):
+        try:
+            marca = self.txt_marca.text()
+            modelo = self.txt_modelo.text()
+            self.validar()
+            con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
+            cursor = con.cursor()
+            cursor.execute("SELECT * FROM marca where marca_nombre='" + marca + "'")
+            marca_lista = cursor.fetchone()
+            if (marca_lista != None):
+                query = ("insert into modelo(modelo_nombre) values (%s)")
+                cursor.execute(query, modelo)
+                # insertar en la tabla combinada
+                marcaC = "SELECT  marca.id_marca,marca.marca_nombre FROM marca WHERE marca.marca_nombre =%s "
+                cursor.execute(marcaC, marca)
+                datos = cursor.fetchall()
+                idmarca = datos[0][0]
+                modeloC = "SELECT  modelo.id_modelo,modelo.modelo_nombre FROM modelo WHERE modelo.modelo_nombre =%s "
+                cursor.execute(modeloC, modelo)
+                datos = cursor.fetchall()
+                idmodelo = datos[0][0]
+                query2 = ("insert into marca_modelo(id_modelo,id_marca) values (%s,%s)")
+                cursor.execute(query2, (str(idmodelo), str(idmarca)))
+                con.commit()
+                self.cargar_tabla_modelo()
+                self.cargar_tabla_marca()
+            else:
+                sql = "insert into marca(marca_nombre) values (%s) "
+                cursor.execute(sql, marca)
+                query = ("insert into modelo(modelo_nombre) values (%s)")
+                cursor.execute(query, modelo)
+
+                # insertar en la tabla combinada
+                marcaC = "SELECT  marca.id_marca,marca.marca_nombre FROM marca WHERE marca.marca_nombre =%s "
+                cursor.execute(marcaC, marca)
+                datos = cursor.fetchall()
+                idmarca = datos[0][0]
+                modeloC = "SELECT  modelo.id_modelo,modelo.modelo_nombre FROM modelo WHERE modelo.modelo_nombre =%s "
+                cursor.execute(modeloC, modelo)
+                datos = cursor.fetchall()
+                idmodelo = datos[0][0]
+                query2 = ("insert into marca_modelo(id_modelo,id_marca) values (%s,%s)")
+
+                cursor.execute(query2, (str(idmodelo), str(idmarca)))
+                con.commit()
+
+                self.cargar_tabla_modelo()
+                self.cargar_tabla_marca()
+        except Exception as e:
+            self.mostrar_error(e.args[0])
+
+
+
 
     def mostrar_error(self, msg):
         QMessageBox.critical(self, 'Error', msg)

@@ -3,9 +3,12 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, \
 from PyQt5 import uic
 import sys
 import pymysql
+
+from vistas.lista_equipo_combustion import DialogoEquiposCombustion
 from vistas.lista_responsable import DialogoResponsable
 from vistas.lista_equipo_electrico import DialogoEquiposElectricos
 from vistas.lista_mueble import DialogoMuebles
+from vistas.lista_usuario import DialogoUsuario
 from vistas.porciento_medios_basicos import porcientoMediosBasicos
 from vistas.responsable_equipo_may_consumo import ResponsableMayConsumo
 from vistas.responsable_may_edad import ResponsableMayEdad
@@ -30,14 +33,19 @@ class ventana_principal(QMainWindow):
         self.dialogo_muebles = DialogoMuebles()
         self.porciento = porcientoMediosBasicos()
         self.mayoredad = ResponsableMayEdad()
+        self.equipos_combustion = DialogoEquiposCombustion()
+        self.usuario=DialogoUsuario()
         self.actionresponsable.triggered.connect(self.abrirDialogoResponsable)
         self.action_muebles.triggered.connect(self.abrirDialogoMuebles)
         self.actionEquipos_Electricos.triggered.connect(self.abrirDialogoEquiposElectricos)
+        self.actionEquipos_de_Combustion.triggered.connect(self.abrirEquiposCombustion)
         self.actionResonsable_may_consumo.triggered.connect(self.abrirResponsableMayConsumo)
         self.actionLista_de_responsable_de_edad.triggered.connect(self.abrirResponsableMayEdad)
         self.action_local.triggered.connect(self.abrirPorcientoMediosBasicos)
         self.actionGrafico_de_Mueble_por_material.triggered.connect(self.grafico_material)
-     #  self.actionCerrar_cesion.triggered.connect(self.abrirLoguin)
+        self.actionUsuarios.triggered.connect(self.abrirListaUsario)
+
+    #  self.actionCerrar_cesion.triggered.connect(self.abrirLoguin)
 
     def abrirLoguin(self):
         self.parent.show()
@@ -59,6 +67,13 @@ class ventana_principal(QMainWindow):
 
     def abrirResponsableMayEdad(self):
         self.mayoredad.exec()
+
+    def abrirEquiposCombustion(self):
+        self.equipos_combustion.exec_()
+
+    def abrirListaUsario(self):
+        self.usuario.exec_()
+
 
     def grafico_material(self):
         con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
@@ -111,6 +126,7 @@ class ventana_principal(QMainWindow):
             self.action_local.setEnabled(False)
             self.actionLista_de_responsable_de_edad.setEnabled(False)
             self.actionGrafico_de_Mueble_por_material.setEnabled(False)
+            self.actionUsuarios.setEnabled(False)
 
 
 if __name__ == "__main__":

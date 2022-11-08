@@ -9,20 +9,24 @@ from PyQt5 import uic
 from fpdf import FPDF
 from modelo.equipo_electrico import EquipoElectrico
 
-class DialogoEquiposElectricos(QDialog):
-    total=[]
-    numInventarioGloabal=0
+
+class DialogoEquiposCombustion(QDialog):
+    total = []
+    numInventarioGloabal = 0
+
     def __init__(self):
         QDialog.__init__(self)
-        uic.loadUi("ui/lista_equipos_electricos.ui", self)
+        uic.loadUi("ui/lista_equipo_combustion.ui", self)
         self.cargar_tabla()
         self.llenar_combo_reposanble()
-        self.txt_buscar.textChanged.connect(self.buscar)
-        self.btn_insertar.clicked.connect(self.insertar_equipos_electricos)
-        self.btn_modificar.clicked.connect(self.modificar_equipos_electricos)
-        self.btn_eliminar.clicked.connect(self.eliminar_equipos_electricos)
+
+    # self.txt_buscar.textChanged.connect(self.buscar)
+
+        self.btn_insertar.clicked.connect(self.insertar_equipos_combustion)
+        self.btn_modificar.clicked.connect(self.modificar_equipos_combustion)
+        self.btn_eliminar.clicked.connect(self.eliminar_equipos_combustion)
         self.table.itemClicked.connect(self.llenar_formulario)
-        self.btn_exportar.clicked.connect(self.exportar_a_pdf)
+    # self.btn_exportar.clicked.connect(self.exportar_a_pdf)
 
     def cargar_tabla(self):
         self.vaciar_tabla()
@@ -33,35 +37,37 @@ class DialogoEquiposElectricos(QDialog):
         if conn == False:
             print("no")
         else:
-            sql = "SELECT ee_id, ee_numero_inventario,ee_fecha, \
-            ee_nombre_objeto, ee_nombre_local, ee_ci_responsable,\
-             ee_consumo,ee_voltaje,ee_marca,ee_modelo, responsable.r_nombre FROM equipos_electricos INNER JOIN responsable ON equipos_electricos.ee_ci_responsable = responsable.r_id"
+            sql = "SELECT  ec_numero_inventario,ec_fecha, \
+            ec_nombre_objeto, ec_nombre_local, ec_ci_responsable,\
+            ec_matricula,ec_chofer,ec_marca,ec_modelo,ec_tipocombustible, responsable.r_nombre FROM " \
+            "equipos_combustion INNER JOIN responsable ON equipos_combustion.ec_ci_responsable = responsable.r_id"
             cursor.execute(sql)
             row = 0
             datos = cursor.fetchall()
-            self.total=datos
+            self.total = datos
             for valores in datos:
                 self.table.insertRow(row)
-                # id = QTableWidgetItem(str(valores[0]))
-                num_inv = QTableWidgetItem(str(valores[1]))
-                fecha = QTableWidgetItem(str(valores[2]))
+                num_inv = QTableWidgetItem(str(valores[0]))
+                fecha = QTableWidgetItem(str(valores[1]))
                 nombre_objeto = QTableWidgetItem(str(valores[3]))
-                nombre_local = QTableWidgetItem(str(valores[4]))
+                nombre_local = QTableWidgetItem(str(valores[2]))
                 responsable = QTableWidgetItem(str(valores[10]))
-                consumo = QTableWidgetItem(str(valores[6]))
-                voltaje = QTableWidgetItem(str(valores[7]))
-                marca = QTableWidgetItem(str(valores[8]))
-                modelo = QTableWidgetItem(str(valores[9]))
+                matricula = QTableWidgetItem(str(valores[5]))
+                chofer = QTableWidgetItem(str(valores[6]))
+                marca = QTableWidgetItem(str(valores[7]))
+                modelo = QTableWidgetItem(str(valores[8]))
+                tipoCombustible = QTableWidgetItem(str(valores[9]))
 
                 self.table.setItem(row, 0, num_inv)
                 self.table.setItem(row, 1, fecha)
                 self.table.setItem(row, 2, nombre_objeto)
                 self.table.setItem(row, 3, nombre_local)
                 self.table.setItem(row, 4, responsable)
-                self.table.setItem(row, 5, consumo)
-                self.table.setItem(row, 6, voltaje)
+                self.table.setItem(row, 5, matricula)
+                self.table.setItem(row, 6, chofer)
                 self.table.setItem(row, 7, marca)
                 self.table.setItem(row, 8, modelo)
+                self.table.setItem(row, 9, tipoCombustible)
                 row = row + 1
 
         con.commit()
@@ -86,19 +92,19 @@ class DialogoEquiposElectricos(QDialog):
             cursor.close()
             con.close()
 
-    def insertar_equipos_electricos(self):
+    def insertar_equipos_combustion(self):
         try:
             nume = self.spin_inventario.text()
-            nume_invetario=int(nume)
-            nom_objeto = self.txt_nom_objeto.text()
+            nume_invetario = int(nume)
             fecha = self.fecha.text()
             fecha_dt = datetime.strptime(fecha, '%d-%m-%Y')
+            nom_objeto = self.txt_nom_objeto.text()
             nom_local = self.txt_nom_local.text()
             responsable = self.combo_responsable.currentText()
-            consumo = int(self.spin_consumo.text())
-            voltaje = int(self.combo_voltaje.currentText())
-            marca = self.txt_marca.text()
+            matricula = self.txt_matricula.text()
+            chofer = self.txt_chofer.text()
             modelo = self.txt_modelo.text()
+            marca = self.txt_marca.text()
             variables = responsable.split('-')
             self.validar()
             self.existe_medio_basico(nume)
@@ -109,17 +115,16 @@ class DialogoEquiposElectricos(QDialog):
             res = cursor.fetchall()
             respon = res[0][0]
             query = (
-                "insert into equipos_electricos(ee_numero_inventario, ee_fecha,ee_nombre_objeto, ee_nombre_local, ee_ci_responsable,\
-             ee_consumo,ee_voltaje,ee_marca,ee_modelo) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)")
-            cursor.execute(query,(nume_invetario, fecha_dt, nom_objeto, nom_local, respon, consumo, voltaje, marca, modelo))
+                "insert into equipos_combustion(ec_numero_inventario, ec_fecha,ec_nombre_objeto, ec_nombre_local, ec_ci_responsable,\
+             ec_matricula,ec_chofer,ec_marca,ec_modelo) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)")
+            cursor.execute(query, (nume_invetario, fecha_dt, nom_objeto,nom_local, respon, matricula, chofer, marca, modelo))
             con.commit()
-
             self.cargar_tabla()
 
         except Exception as e:
             self.mostrar_error(e.args[0])
 
-    def modificar_equipos_electricos(self):
+    def modificar_equipos_combustion(self):
         try:
             ind = self.table.currentRow()
             if ind == -1:
@@ -127,15 +132,16 @@ class DialogoEquiposElectricos(QDialog):
             id = self.numInventarioGloabal
             nume = self.spin_inventario.text()
             nume_invetario = int(nume)
-            nom_objeto = self.txt_nom_objeto.text()
             fecha = self.fecha.text()
             fecha_dt = datetime.strptime(fecha, '%d-%m-%Y')
+            nom_objeto = self.txt_nom_objeto.text()
             nom_local = self.txt_nom_local.text()
             responsable = self.combo_responsable.currentText()
-            consumo = int(self.spin_consumo.text())
-            voltaje = int(self.combo_voltaje.currentText())
-            marca = self.txt_marca.text()
+            matricula = self.txt_matricula.text()
+            chofer = self.txt_chofer.text()
             modelo = self.txt_modelo.text()
+            marca = self.txt_marca.text()
+            tipo_combustion=self.comboBox_tipocombustible.currentText()
             variables = responsable.split('-')
             self.validar()
             con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
@@ -144,9 +150,12 @@ class DialogoEquiposElectricos(QDialog):
             cursor.execute(sql, variables[0])
             res = cursor.fetchall()
             respon = res[0][0]
-            query = ("update equipos_electricos set ee_numero_inventario ='" + str(nume_invetario) + "',ee_fecha ='" + str(fecha_dt) + "',ee_nombre_objeto ='" + nom_objeto + "',\
-                  ee_nombre_local='" + nom_local + "',ee_ci_responsable='" + str (respon) + "',ee_consumo='" + str(consumo) + "', \
-                  ee_voltaje='" + str(voltaje) + "',ee_marca='" + marca + "',ee_modelo='" + modelo + "' where ee_id='" + str(id) + "'")
+            query = ("update equipos_combustion set ec_numero_inventario ='" + str(
+                nume_invetario) + "',ec_fecha ='" + str(fecha_dt) + "',ec_nombre_objeto ='" + nom_objeto + "',\
+                  ec_nombre_local='" + nom_local + "',ec_ci_responsable='" + str(respon) + "',ec_matricula='" + str(
+                matricula) + "', \
+                  ec_chofer='" + str(
+                chofer) + "',ec_marca='" + marca + "',ec_modelo='" + modelo + "',ec_tipocombustible='" + tipo_combustion + "' where ec_id='" + str(id) + "'")
 
             cursor.execute(query)
             con.commit()
@@ -155,9 +164,9 @@ class DialogoEquiposElectricos(QDialog):
         except Exception as e:
             self.mostrar_error(e.args[0])
 
-    def eliminar_equipos_electricos(self):
+    def eliminar_equipos_combustion(self):
         dialogo = QMessageBox.warning(
-            self, "Diálogo de aviso", "¿Estás seguro de eliminar el equipo_electrico",
+            self, "Diálogo de aviso", "¿Estás seguro de eliminar el Equipo de combustiòn",
             buttons=QMessageBox.Yes | QMessageBox.No,
             defaultButton=QMessageBox.No)
         if dialogo == QMessageBox.Yes:
@@ -168,7 +177,7 @@ class DialogoEquiposElectricos(QDialog):
                 id = self.numInventarioGloabal
                 con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
                 cursor = con.cursor()
-                query = ("delete from equipos_electricos where ee_id=%s")
+                query = ("delete from equipos_combustion where ec_id=%s")
                 cursor.execute(query, id)
                 con.commit()
                 cursor.close()
@@ -193,7 +202,6 @@ class DialogoEquiposElectricos(QDialog):
         if self.combo_responsable.currentIndex() == 0:
             raise Exception(msg.format("Responsable"))
 
-
     def mostrar_error(self, msg):
         QMessageBox.critical(self, 'Error', msg)
 
@@ -208,20 +216,24 @@ class DialogoEquiposElectricos(QDialog):
             mueble_tuple = cursor.fetchone()
             cursor.execute("SELECT * FROM equipos_electricos where ee_numero_inventario='" + nume_inventario + "'")
             equipos_electricos_tuple = cursor.fetchone()
-            if (mueble_tuple != None or equipos_electricos_tuple != None):
+            cursor.execute("SELECT * FROM equipos_combustion where ec_numero_inventario='" + nume_inventario + "'")
+            equipos_combustio_tuple = cursor.fetchone()
+            if mueble_tuple != None or equipos_electricos_tuple != None or equipos_combustio_tuple != None:
                 raise Exception("Ya existe ese Medio Básico")
 
-            cursor.close()
-            con.close()
+        cursor.close()
+        con.close()
 
     def restablecer_controles(self):
         self.spin_inventario.setValue(0)
         self.txt_nom_objeto.setText("")
         self.txt_nom_local.setText("")
         self.combo_responsable.setCurrentIndex(0)
-        self.spin_consumo.setValue(0)
-        self.combo_voltaje.setCurrentIndex(0)
-
+        self.txt_matricula.setText()
+        self.txt_chofer.setText("")
+        self.txt_marca.setText("")
+        self.txt_modelo.setText("")
+        self.comboBox_tipocombustible.setCurrentText(0)
 
     def llenar_formulario(self):
         ind = self.table.currentRow()
@@ -232,26 +244,28 @@ class DialogoEquiposElectricos(QDialog):
                 numero_inventario = self.table.item(ind, 0).text()
                 con = pymysql.connect(host="localhost", user="root", passwd="", db="medios_basicos")
                 cursor = con.cursor()
-                query = ("SELECT equipos_electricos.ee_id,equipos_electricos.ee_numero_inventario, equipos_electricos.ee_fecha, "
-                         "equipos_electricos.ee_nombre_objeto, equipos_electricos.ee_nombre_local, "
-                         "equipos_electricos.ee_ci_responsable,equipos_electricos.ee_consumo,"
-                         "equipos_electricos.ee_voltaje, equipos_electricos.ee_marca, equipos_electricos.ee_modelo, "
-                         "responsable.r_ci, responsable.r_nombre FROM equipos_electricos "
-                         "INNER JOIN responsable ON equipos_electricos.ee_ci_responsable = responsable.r_id    WHERE ee_numero_inventario = %s")
+                query = (
+                    "SELECT equipos_combustion.ec_id,equipos_combustion.ec_numero_inventario, equipos_combustion.ec_fecha, "
+                    "equipos_combustion.ec_nombre_objeto, equipos_combustion.ec_nombre_local, "
+                    "equipos_combustion.ec_ci_responsable,equipos_combustion.ec_matricula,"
+                    "equipos_combustion.ec_chofer, equipos_combustion.ec_marca, equipos_combustion.ec_modelo,equipos_combustion.ec_tipocombustible, "
+                    "responsable.r_ci, responsable.r_nombre FROM equipos_combustion "
+                    "INNER JOIN responsable ON equipos_combustion.ec_ci_responsable = responsable.r_id    WHERE ec_numero_inventario = %s")
                 cursor.execute(query, (numero_inventario))
-                EquiposElectricos = cursor.fetchone()
-                self.numInventarioGloabal=EquiposElectricos[0]
-                self.spin_inventario.setValue(int(EquiposElectricos[1]))
-                fecha = EquiposElectricos[2].isoformat()
+                EquiposCombustion = cursor.fetchone()
+                self.numInventarioGloabal = EquiposCombustion[0]
+                self.spin_inventario.setValue(int(EquiposCombustion[1]))
+                fecha = EquiposCombustion[2].isoformat()
                 fecha_dt = datetime.strptime(fecha, '%Y-%m-%d')
                 self.fecha.setDate(fecha_dt)
-                self.txt_nom_objeto.setText(EquiposElectricos[3])
-                self.txt_nom_local.setText(EquiposElectricos[4])
-                self.combo_responsable.setCurrentText(EquiposElectricos[10] + "-" + EquiposElectricos[11])
-                self.spin_consumo.setValue(int(EquiposElectricos[6]))
-                self.combo_voltaje.setCurrentText(str(EquiposElectricos[7]))
-                self.txt_marca.setText(EquiposElectricos[8])
-                self.txt_modelo.setText(EquiposElectricos[9])
+                self.txt_nom_objeto.setText(EquiposCombustion[3])
+                self.txt_nom_local.setText(EquiposCombustion[4])
+                self.combo_responsable.setCurrentText(EquiposCombustion[11] + "-" + EquiposCombustion[12])
+                self.txt_matricula.setText(EquiposCombustion[6])
+                self.txt_chofer.setText(str(EquiposCombustion[7]))
+                self.txt_marca.setText(EquiposCombustion[8])
+                self.txt_modelo.setText(EquiposCombustion[9])
+                self.comboBox_tipocombustible.setCurrentText(EquiposCombustion[10])
 
                 con.commit()
                 cursor.close()
@@ -264,7 +278,6 @@ class DialogoEquiposElectricos(QDialog):
 
     def fecha(self, ho):
         una_fecha = '20/04/2019'
-
 
     def buscar(self):
         self.vaciar_tabla()
@@ -296,7 +309,7 @@ class DialogoEquiposElectricos(QDialog):
             cursor.execute(sql, nombre)
             row = 0
             datos = cursor.fetchall()
-            self.total=datos
+            self.total = datos
             for valores in datos:
                 self.table.insertRow(row)
                 # id = QTableWidgetItem(str(valores[0]))
@@ -326,52 +339,54 @@ class DialogoEquiposElectricos(QDialog):
         con.close()
         self.table.resizeColumnsToContents()
 
-    def exportar_a_pdf(self,):
+    def exportar_a_pdf(self, ):
         self.exportar(self.total)
+
     def mostrar_mensaje(self, msg):
         QMessageBox.information(self, 'Export', msg)
-    def exportar(self,lista_tabla):
-       try:
-           pdf = FPDF(orientation='P', unit='mm', format='A4')
-           pdf.add_page()
-           # Texto
-           pdf.set_font('Arial', '', 13)
 
-           # Titulo
-           pdf.cell(w=60, h=15, txt='Reporte Equipos Electricos', border=1, ln=1, align='C', fill=0)
+    def exportar(self, lista_tabla):
+        try:
+            pdf = FPDF(orientation='P', unit='mm', format='A4')
+            pdf.add_page()
+            # Texto
+            pdf.set_font('Arial', '', 13)
 
-           # encabezado
-           pdf.cell(w=10, h=15, txt="ID", border=1, align='C', fill=0)
-           pdf.cell(w=20, h=15, txt="No. Inve", border=1, align='C', fill=0)
-           pdf.cell(w=30, h=15, txt="Fecha", border=1, align='C', fill=0)
-           pdf.cell(w=20, h=15, txt="Nom del Ob", border=1, align='C', fill=0)
-           pdf.cell(w=20, h=15, txt="Nom del local", border=1, align='C', fill=0)
-           pdf.cell(w=25, h=15, txt="Responsable", border=1, align='C', fill=0)
-           pdf.cell(w=20, h=15, txt="Consumo", border=1, align='C', fill=0)
-           pdf.cell(w=30, h=15, txt="Voltaje", border=1, align='C', fill=0)
-           pdf.cell(w=20, h=15, txt="Marca", border=1, align='C', fill=0)
-           pdf.multi_cell(w=20, h=15, txt="Modelos", border=1, align='C', fill=0)
-           val = 1
-           for valor in lista_tabla:
-               pdf.cell(w=10, h=15, txt=str(val), border=1, align='C', fill=0)
-               pdf.cell(w=20, h=15, txt=str(valor[1]), border=1, align='C', fill=0)
-               pdf.cell(w=30, h=15, txt=str(valor[2]), border=1, align='C', fill=0)
-               pdf.cell(w=20, h=15, txt=str(valor[3]), border=1, align='C', fill=0)
-               pdf.cell(w=20, h=15, txt=str(valor[4]), border=1, align='C', fill=0)
-               pdf.cell(w=25, h=15, txt=str(valor[10]), border=1, align='C', fill=0)
-               pdf.cell(w=20, h=15, txt=str(valor[6]), border=1, align='C', fill=0)
-               pdf.cell(w=30, h=15, txt=str(valor[7]), border=1, align='C', fill=0)
-               pdf.cell(w=20, h=15, txt=str(valor[8]), border=1, align='C', fill=0)
-               pdf.multi_cell(w=20, h=15, txt=str(valor[9]), border=1, align='C', fill=0)
-               val = val + 1
-           pdf.output('EquipoElectricos.pdf')
-           self.mostrar_mensaje("pdf exportado correctamente")
-       except Exception as e:
+            # Titulo
+            pdf.cell(w=60, h=15, txt='Reporte Equipos Electricos', border=1, ln=1, align='C', fill=0)
+
+            # encabezado
+            pdf.cell(w=10, h=15, txt="ID", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="No. Inve", border=1, align='C', fill=0)
+            pdf.cell(w=30, h=15, txt="Fecha", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Nom del Ob", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Nom del local", border=1, align='C', fill=0)
+            pdf.cell(w=25, h=15, txt="Responsable", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Consumo", border=1, align='C', fill=0)
+            pdf.cell(w=30, h=15, txt="Voltaje", border=1, align='C', fill=0)
+            pdf.cell(w=20, h=15, txt="Marca", border=1, align='C', fill=0)
+            pdf.multi_cell(w=20, h=15, txt="Modelos", border=1, align='C', fill=0)
+            val = 1
+            for valor in lista_tabla:
+                pdf.cell(w=10, h=15, txt=str(val), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[1]), border=1, align='C', fill=0)
+                pdf.cell(w=30, h=15, txt=str(valor[2]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[3]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[4]), border=1, align='C', fill=0)
+                pdf.cell(w=25, h=15, txt=str(valor[10]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[6]), border=1, align='C', fill=0)
+                pdf.cell(w=30, h=15, txt=str(valor[7]), border=1, align='C', fill=0)
+                pdf.cell(w=20, h=15, txt=str(valor[8]), border=1, align='C', fill=0)
+                pdf.multi_cell(w=20, h=15, txt=str(valor[9]), border=1, align='C', fill=0)
+                val = val + 1
+            pdf.output('EquipoElectricos.pdf')
+            self.mostrar_mensaje("pdf exportado correctamente")
+        except Exception as e:
             self.mostrar_error("Por favor cierre el pdf")
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    GUI = DialogoEquiposElectricos()
+    GUI = DialogoEquiposCombustion()
     GUI.show()
     app.exec()

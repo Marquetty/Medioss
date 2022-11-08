@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Responsabe mayores de una edad dada</string>
   </property>
   <widget class="QPushButton" name="btn_buscar">
    <property name="geometry">

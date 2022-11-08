@@ -2,12 +2,13 @@ from PyQt5.QtWidgets import QApplication, QDialog, QMessageBox
 import pymysql
 from PyQt5 import uic
 import sys
+import pandas as pd
 
 
 class porcientoMediosBasicos(QDialog):
     def __init__(self):
         QDialog.__init__(self)
-        uic.loadUi("ui/porciento_medios_basicos.ui",self)
+        uic.loadUi("ui/porciento_medios_basicos.ui", self)
         self.llenarcombonombre()
         self.btn_calcular.clicked.connect(self.porciento_medios_basicos)
 
@@ -20,25 +21,26 @@ class porcientoMediosBasicos(QDialog):
         if estado == False:
             print("error de conexion")
         else:
-           try:
-               total, parte = 0, 0
-               sql = "SELECT Count(mueble.m_id) FROM mueble where m_nombre_local=%s"
-               cursor.execute(sql, nombre_local)
-               total1 = cursor.fetchall()
-               total = int(total1[0][0])
-               query = "SELECT Count(mueble.m_matrial) FROM mueble WHERE mueble.m_matrial = %s"
-               cursor.execute(query, material_fabricacion)
-               parte1 = cursor.fetchall()
-               parte = int(parte1[0][0])
-               if total == 0:
-                   raise Exception("No existe ese local")
-               if parte == 0:
-                   raise Exception("No hay medios básicos de ese local fabricados con ese material")
-               porciento = parte * 100.0 / total
-               QMessageBox.information(self,"Información",str(porciento),QMessageBox.Ok)
+            try:
+                total, parte = 0, 0
+                sql = "SELECT Count(mueble.m_id) FROM mueble where m_nombre_local=%s"
+                cursor.execute(sql, nombre_local)
+                total1 = cursor.fetchall()
+                total = int(total1[0][0])
+                query = "SELECT Count(mueble.m_matrial) FROM mueble WHERE mueble.m_matrial = %s"
+                cursor.execute(query, material_fabricacion)
+                parte1 = cursor.fetchall()
+                parte = int(parte1[0][0])
+                if total == 0:
+                    raise Exception("No existe ese local")
+                if parte == 0:
+                    raise Exception("No hay medios básicos de ese local fabricados con ese material")
+                porciento = parte * 100.0 / total
+                QMessageBox.information(self, "Información", str(porciento), QMessageBox.Ok)
 
-           except Exception as e:
-               self.mostrar_error(e.args[0])
+            except Exception as e:
+                self.mostrar_error(e.args[0])
+
     def mostrar_error(self, msg):
         QMessageBox.critical(self, 'Error', msg)
 
@@ -55,14 +57,18 @@ class porcientoMediosBasicos(QDialog):
 
             self.comboBox_material.addItem("-Seleccione-")
             self.comboBox_nombre_local.addItem("-Seleccione-")
+            valornorepetid=[]
             for valores in tuple:
-                self.comboBox_material.addItem(valores[0])
-                self.comboBox_nombre_local.addItem(valores[1])
+                if valores[0] not in valornorepetid:
+                    self.comboBox_material.addItem(valores[0])
+                    valornorepetid.append(valores[0])
+
+                if valores[1] not in valornorepetid :
+                    self.comboBox_nombre_local.addItem(valores[1])
+                    valornorepetid.append(valores[1])
 
             cursor.close()
             con.close()
-
-
 
 
 if __name__ == "__main__":

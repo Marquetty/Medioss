@@ -27,13 +27,13 @@ class listaMayorConusmo(QDialog):
                 sql = "select * from equipos_electricos  where ee_marca>%s"
                 cursor.execute(sql, consumo)
                 equipos_electricos = cursor.fetchall()
-                print(equipos_electricos
-                 )
+                print(equipos_electricos)
 
         except Exception as e:
             self.mostrar_error(e.args[0])
     def mostrar_error(self, msg):
         QMessageBox.critical(self, 'Error', msg)
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     GUI = listaMayorConusmo()

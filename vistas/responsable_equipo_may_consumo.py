@@ -61,14 +61,17 @@ class ResponsableMayConsumo(QDialog):
             QMessageBox.warning(self, "Error", "No", QMessageBox.OK)
         else:
             row = 0
-            cursor.execute("SELECT * FROM marca")
+            cursor.execute("SELECT ee_marca from equipos_electricos")
             tuple = cursor.fetchall()
             self.comboBox_buscar.addItem("-Seleccione-")
-            for valores in tuple:
-                self.comboBox_buscar.addItem(valores[1])
-                row = row + 1
-            cursor.close()
-            con.close()
+            valoresnoduplicado = []
+            for item in tuple:
+               if item[0] not in valoresnoduplicado:
+                   self.comboBox_buscar.addItem(item[0])
+                   valoresnoduplicado.append(item[0])
+
+        cursor.close()
+        con.close()
 
 
 if __name__ == "__main__":

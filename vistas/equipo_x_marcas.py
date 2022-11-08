@@ -10,7 +10,7 @@ class Equipo_x_marcas(QDialog):
     def __init__(self):
         QDialog.__init__(self)
         uic.loadUi("ui/responsable_may_cosumo.ui", self)
-        self.btn_buscar.clicked.connect(self.responsable_equipo_may_consumo)
+        self.btn_buscar.clicked.connect(self.Equipo_x_marcas)
 
     def Equipo_x_marcas(self):
         try:

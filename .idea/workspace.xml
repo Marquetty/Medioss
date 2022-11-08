@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df2e6cfe-ccb2-4c3e-826e-b884b7bb6466" name="Default Changelist" comment="Loguin">
+      <change afterPath="$PROJECT_DIR$/modelo/equipo_combustion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/lista_equipo_combustion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vistas/lista_usuario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/EquipoElectricos.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/Loguin.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/equipo_x_marcas.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/equipo_x_marcas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_equipo_electrico.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/lista_mueble.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_mueble.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/lista_responsable.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_responsable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/lista_mayor_consumo.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_mayor_consumo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/lista_modelo_marca.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/lista_modelo_marca.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vistas/loguin.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/loguin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vistas/responsable_may_edad.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/responsable_may_edad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/porciento_medios_basicos.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/porciento_medios_basicos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/reportes/reporte_e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/reportes/reporte_ee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/responsable_equipo_may_consumo.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/responsable_equipo_may_consumo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/Loguin.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/Loguin.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_equipos_electricos.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/lista_mueble.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/porciento_medios_basicos.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/porciento_medios_basicos.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/responsable_may_cosumo.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/responsable_may_cosumo.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistas/ui/responsable_may_edad.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/responsable_may_edad.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vistas/ui/ventana_principal.ui" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ui/ventana_principal.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vistas/ventana.py" beforeDir="false" afterPath="$PROJECT_DIR$/vistas/ventana.py" afterDir="false" />
     </list>
@@ -142,7 +153,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.loguin">
-    <configuration name="graficos (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="equipo_x_marcas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Medioss" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,28 +165,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/graficos.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="graficos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Medioss" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Trabajos\Hector\Medioss\vistas\graficos.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/equipo_x_marcas.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,27 +195,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lista_modelo_marca" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Medioss" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/lista_modelo_marca.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="loguin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Medioss" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,20 +216,62 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="porciento_medios_basicos" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/porciento_medios_basicos.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="responsable_equipo_may_consumo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Medioss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vistas" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vistas/responsable_equipo_may_consumo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.graficos (1)" />
-      <item itemvalue="Python.lista_modelo_marca" />
-      <item itemvalue="Python.graficos" />
+      <item itemvalue="Python.equipo_x_marcas" />
+      <item itemvalue="Python.porciento_medios_basicos" />
+      <item itemvalue="Python.responsable_equipo_may_consumo" />
       <item itemvalue="Python.loguin" />
       <item itemvalue="Python.lista_equipo_electrico" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.loguin" />
-        <item itemvalue="Python.lista_modelo_marca" />
+        <item itemvalue="Python.equipo_x_marcas" />
+        <item itemvalue="Python.responsable_equipo_may_consumo" />
+        <item itemvalue="Python.porciento_medios_basicos" />
         <item itemvalue="Python.lista_equipo_electrico" />
-        <item itemvalue="Python.graficos" />
-        <item itemvalue="Python.graficos (1)" />
       </list>
     </recent_temporary>
   </component>
